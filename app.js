@@ -25,7 +25,7 @@ function postToTrello(listId, command, text, cb) {
 	trello.post("/1/lists/" + listId + "/cards", card_data, cb);
 }
 
-app.post('/trello/*', function(req, res) {
+app.post('/*', function(req, res) {
   	var listId = req.params[0];
     var command = req.body.command,
         text = req.body.text;
