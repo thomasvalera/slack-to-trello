@@ -1,0 +1,22 @@
+{
+  "name": "trello-slack",
+  "description": "create trello cards using slack",
+  "version": "0.0.1",
+  "private": true,
+  "main": "app.js",
+  "dependencies": {
+  	"express": "*",
+    "body-parser": "*",
+    "node-trello": "*"
+  },
+  "env": {
+  	"TRELLO_KEY" : {
+      "description": "trello key",
+      "required": true
+  	},
+    "TRELLO_TOKEN": {
+      "description": "trello token",
+      "required": true
+    }
+  }
+}
