@@ -9,7 +9,7 @@ var port = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
  
 function postToTrello(listId, command, text, cb) {
-    var regex = /"(.*?)"/g;
+    var regex = /[(.*?)]/g;
     var name = regex.exec(text);
     var desc = regex.exec(text);
 
